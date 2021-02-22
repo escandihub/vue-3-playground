@@ -1,25 +1,30 @@
 <template>
 	<div class="hello">
-		<h1>Filter LearnVue Aricle</h1>
+		<!-- <h1>Filter LearnVue Aricle</h1>
 		<input type="text" placeholder="Filter Search" v-model="query" />
 		{{ query }}
 <br/>
 		<button @click="reset">Reset</button>
 		<br/>
-		<search-results :query="query"/>
+		<search-results :query="query"/> -->
+
+		<!-- part of second example -->
+		<add-todo />
+		<todos />
 	</div>
 </template>
 
 <script>
 import { ref } from "vue";
-import SearchResults from "./SearchResults.vue"
+// import SearchResults from "./SearchResults.vue"
+import Todos from "./Todo";
+import AddTodo from "./AddTodo";
 export default {
 	name: "HelloWorld",
 	components: {
-		SearchResults,
-	},
-	props: {
-		msg: String,
+		// SearchResults,
+		Todos,
+		AddTodo,
 	},
 	setup() {
 		const query = ref("");
@@ -35,7 +40,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 h3 {
 	margin: 40px 0 0;
 }
